@@ -43,6 +43,12 @@
     enable = true;
   };
 
+  stylix = {
+    enable = true;
+    image = ./desktop/wp/mono_no_aware.jpg;
+    polarity = "dark";
+  };
+
   services.power-profiles-daemon.enable = false;
 
   services.tlp = {
