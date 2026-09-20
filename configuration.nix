@@ -27,7 +27,7 @@
   users.users.sam = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   environment.systemPackages = with pkgs; [
@@ -39,7 +39,7 @@
 
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -49,6 +49,10 @@
     enable = true;
     image = ./desktop/wp/mono_no_aware.jpg;
     polarity = "dark";
+
+    opacity = {
+      terminal = 0.9;
+    };
   };
 
   services.power-profiles-daemon.enable = false;
