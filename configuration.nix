@@ -27,6 +27,7 @@
   users.users.sam = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
+    shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
@@ -38,6 +39,7 @@
 
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
+  programs.zsh.enable = true;
 
   xdg.portal = {
     enable = true;
