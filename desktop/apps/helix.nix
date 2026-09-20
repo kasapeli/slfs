@@ -3,5 +3,9 @@
 {
   programs.helix.enable = true;
 
-  stylix.targets.helix.enable = false;
+  stylix.targets.helix = {
+    enable = true;
+    colors.enable = false;
+    opacity.enable = true;
+  };
 }
