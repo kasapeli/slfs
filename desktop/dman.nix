@@ -3,7 +3,8 @@
 {
   imports = [
     ./hyprland.nix
-    ./apps/zsh.nix
+    ./apps/fish.nix
+    ./apps/alacritty.nix
     ./apps/helix.nix
   ];
 }
