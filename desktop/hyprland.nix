@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     fuzzel
     waybar
-    awww
     alacritty
     wl-clipboard
   ];
@@ -17,7 +16,6 @@
     extraConfig = ''
         hl.on("hyprland.start", function()
           hl.exec_cmd("waybar")
-          hl.exec_cmd("awww-daemon")
         end)
 
         local mainMod = "SUPER"
