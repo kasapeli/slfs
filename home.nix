@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "sam";
@@ -14,7 +14,7 @@
 
   imports = [
     ./desktop/dman.nix
-    ./dev/git.nix
+    ./dev/dman.nix
   ];
 
   programs.home-manager.enable = true;

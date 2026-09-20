@@ -40,13 +40,32 @@
           hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move ({workspace = i}))
         end
 
-        decoration = {
-          blur = {
-            enabled = true,
-            size = 8,
-            passes = 8,
+        hl.config({
+          general = {
+            border_size = 0,
+          },
+
+          decoration = {
+            rounding = 5,
+            rounding_power = 2,
+            
+            blur = {
+              enabled = true,
+              size = 10,
+              passes = 4,
+
+              new_optimizations = true,
+              xray = true,
+              noise = 0.02,
+              brightness = 0.8,
+              vibrancy = 0.2,
+            }
           }
-        }
-      '';
+        })
+
+        hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
+        hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
+        hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+    '';
   };
 }
