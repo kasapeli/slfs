@@ -8,8 +8,10 @@
         set -g fish_greeting ""
       '';
 
-    shellAbbrevs = {
+    shellAbbrs = {
       nrb = "sudo nixos-rebuild switch --flake .";
     };
   };
+
+  stylix.targets.fish.enable = false;
 }
