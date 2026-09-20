@@ -30,11 +30,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    helix
     wget
   ];
 
   services.openssh.enable = true;
+  programs.ssh.startAgent = true;
 
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
