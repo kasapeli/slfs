@@ -6,6 +6,7 @@
     waybar
     awww
     alacritty
+    wl-clipboard
   ];
 
   wayland.windowManager.hyprland = {
