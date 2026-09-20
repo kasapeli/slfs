@@ -1,11 +1,22 @@
 { pkgs, ... }:
 
 {
-  programs.helix.enable = true;
-
-  stylix.targets.helix = {
+  programs.helix = {
     enable = true;
-    colors.enable = false;
-    opacity.enable = true;
+
+    settings = {
+      theme = "trans"; # (parent)
+
+      editor = {
+        line-number = "relative";
+      };
+    };
+
+    themes = {
+      trans = {
+        "inherits" = "onedark";
+        "ui.background" = { fg = ""; bg = ""; };
+      };
+    };
   };
 }

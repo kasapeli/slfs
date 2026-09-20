@@ -8,6 +8,7 @@
     wl-clipboard
     hyprshot
     hyprpicker
+    awww
   ];
 
   wayland.windowManager.hyprland = {
@@ -18,6 +19,7 @@
     extraConfig = ''
         hl.on("hyprland.start", function()
           hl.exec_cmd("waybar")
+          hl.exec_cmd("awww-daemon")
         end)
 
         local mainMod = "SUPER"

@@ -12,6 +12,4 @@
       nrb = "sudo nixos-rebuild switch --flake .";
     };
   };
-
-  stylix.targets.fish.enable = false;
 }

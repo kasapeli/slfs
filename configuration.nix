@@ -45,16 +45,6 @@
     enable = true;
   };
 
-  stylix = {
-    enable = true;
-    image = ./desktop/wp/mono_no_aware.jpg;
-    polarity = "dark";
-
-    opacity = {
-      terminal = 0.9;
-    };
-  };
-
   services.power-profiles-daemon.enable = false;
 
   services.tlp = {
