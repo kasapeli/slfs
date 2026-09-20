@@ -13,7 +13,7 @@
   ];
 
   imports = [
-    ./desktop/hyprland.nix
+    ./desktop/dman.nix
     ./dev/git.nix
   ];
 
