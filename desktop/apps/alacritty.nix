@@ -1,11 +1,11 @@
-{ lib, ... }:
+{ ... }:
 
 {
   programs.alacritty = {
     enable = true;
     settings = {
       window = {
-        opacity = 0.7;
+        opacity = 1;
         blur = true;
       };
     };

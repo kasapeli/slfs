@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -34,6 +34,8 @@
         hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
         hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+        hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+
         for i = 1, 10 do
           local key = i % 10
           hl.bind(mainMod .. " + " .. key, hl.dsp.focus({workspace = i}))
@@ -42,6 +44,8 @@
 
         hl.config({
           general = {
+            gaps_in = 2,
+            gaps_out = 4,
             border_size = 0,
           },
 
