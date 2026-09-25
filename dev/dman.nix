@@ -2,7 +2,9 @@
 
 {
   imports = [
-    ./git.nix
+    ./tools/git.nix
     ./lang.nix
+    ./tools/direnv.nix
+    ./tools.nix
   ];
 }

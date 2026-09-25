@@ -20,7 +20,7 @@
         modules-right = [ "pulseaudio" "battery" ];
 
         "hyprland/workspaces" = {
-          format = "[{name}]";
+          format = "{name}";
           persistent-workspaces = {
             "*" = 5;
           };
